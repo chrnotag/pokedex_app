@@ -27,6 +27,7 @@ class _RegistrationInsertEmailState extends State<RegistrationInsertEmail> {
         textfieldHint: "E-mail",
         textFieldWarning: "Use um endereço de e-mail válido.",
         textButton: "Confirmar",
+        keyboardType: TextInputType.emailAddress,
         onPressedButton: () => Modular.to.pushNamed(NavigationRoutes.registerEmail02),
         onTap: () => setState(() {
           _mensagemErro = null;

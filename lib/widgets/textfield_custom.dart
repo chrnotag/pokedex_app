@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:pokedex_app/core/constants/colors/main_colors_light.dart';
 
 class TextfieldCustom extends StatefulWidget {
   final String hintText;
   bool obscureText;
-  final List<TextInputFormatter>? textInputFormatters;
+  final TextInputType? keyboardType;
   final TextEditingController controller;
   final FormFieldValidator<String>? validator;
   final VoidCallback? onTap;
@@ -15,7 +14,7 @@ class TextfieldCustom extends StatefulWidget {
       {super.key,
       required this.hintText,
       this.obscureText = false,
-      this.textInputFormatters,
+      this.keyboardType,
       required this.controller,
       this.onTap,
       this.onChanged,
@@ -41,7 +40,7 @@ class _TextfieldCustomState extends State<TextfieldCustom> {
       children: [
         Expanded(
           child: TextFormField(
-            inputFormatters: widget.textInputFormatters,
+            keyboardType: widget.keyboardType,
             decoration: InputDecoration(
               border: OutlineInputBorder(
                 borderSide:

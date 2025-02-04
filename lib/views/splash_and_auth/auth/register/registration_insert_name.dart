@@ -27,6 +27,7 @@ class _RegistrationInsertNameState extends State<RegistrationInsertName> {
         textfieldHint: "Nome",
         textFieldWarning: "Esse será seu nome de usuário no aplicativo.",
         textButton: "Confirmar",
+        keyboardType: TextInputType.name,
         onPressedButton: () => Modular.to.navigate(RouteNames.loadingScreen),
         onTap: () => setState(() {
           _mensagemErro = null;

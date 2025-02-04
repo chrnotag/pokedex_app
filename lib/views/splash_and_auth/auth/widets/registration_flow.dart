@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex_app/core/extensions/theme_extensions/theme_extension.dart';
 import 'package:pokedex_app/widgets/main_extended_button_blue.dart';
@@ -11,7 +10,6 @@ class RegistrationFlow extends StatefulWidget {
   final String pageSubtitle;
   final String textfieldHint;
   final bool textfieldObscureText;
-  final List<TextInputFormatter>? textInputFormatters;
   final FormFieldValidator<String>? validator;
   final VoidCallback? onTap;
   final TextEditingController textfielController;
@@ -21,6 +19,7 @@ class RegistrationFlow extends StatefulWidget {
   final VoidCallback onPressedButton;
   final bool activeStatusButton;
   final ValueChanged<String>? onChanged;
+  final TextInputType? keyboardType;
 
   const RegistrationFlow(
       {super.key,
@@ -29,7 +28,6 @@ class RegistrationFlow extends StatefulWidget {
       required this.pageSubtitle,
       required this.textfieldHint,
       this.textfieldObscureText = false,
-      this.textInputFormatters,
       this.validator,
       this.onTap,
       required this.textFieldWarning,
@@ -38,7 +36,8 @@ class RegistrationFlow extends StatefulWidget {
       required this.formKey,
       required this.textfielController,
       this.activeStatusButton = true,
-      this.onChanged});
+      this.onChanged,
+      this.keyboardType});
 
   @override
   State<RegistrationFlow> createState() => _RegistrationFlowState();
@@ -80,7 +79,7 @@ class _RegistrationFlowState extends State<RegistrationFlow> {
                             onTap: widget.onTap,
                             onChanged: widget.onChanged,
                             validator: widget.validator,
-                            textInputFormatters: widget.textInputFormatters,
+                            keyboardType: widget.keyboardType,
                           ),
                         ),
                         Padding(

@@ -36,8 +36,6 @@ class _AuthAccessViewState extends State<AuthAccessView> {
       appBar: AppBar(
         title: Text(
           widget.appBarTitle,
-          style: context.textTheme.bodyMedium!
-              .copyWith(fontWeight: FontWeight.w900, color: Colors.black),
         ),
         centerTitle: true,
       ),

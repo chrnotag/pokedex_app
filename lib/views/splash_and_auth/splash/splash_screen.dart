@@ -6,6 +6,8 @@ import 'package:pokedex_app/core/constants/fonts.dart';
 import 'package:pokedex_app/core/constants/route_names.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
