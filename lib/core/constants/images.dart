@@ -8,4 +8,5 @@ class Images{
   static final imagesRegisterImage = 'assets/images/image_register.png';
   static final imagesCircularProgressCustom = 'assets/images/circular_progress_custom.png';
   static final imagesRegisterSuccessful = 'assets/images/successful_registration_image.png';
+  static final imagesLoginSuccessful = 'assets/images/image_login_successful.png';
 }

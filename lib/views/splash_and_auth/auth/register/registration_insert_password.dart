@@ -29,6 +29,7 @@ class _RegistrationInsertPasswordState
         textfieldHint: "Senha",
         textFieldWarning: "Sua senha deve ter pelo menos 8 caracteres.",
         textButton: "Confirmar",
+        keyboardType: TextInputType.visiblePassword,
         onPressedButton: () =>
             Modular.to.pushNamed(NavigationRoutes.registerEmail03),
         onTap: () => setState(() {

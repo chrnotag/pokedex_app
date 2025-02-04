@@ -6,11 +6,12 @@ import 'package:pokedex_app/core/constants/colors/main_colors_light.dart';
 import 'package:pokedex_app/core/constants/images.dart';
 import 'package:pokedex_app/core/constants/navigation_routes.dart';
 import 'package:pokedex_app/core/constants/route_names.dart';
-import 'package:pokedex_app/core/extensions/theme_extensions/theme_extension.dart';
 import 'package:pokedex_app/widgets/main_extended_button_blue.dart';
 import 'package:pokedex_app/widgets/presentation_view.dart';
 
 class OnboardingScreen extends StatefulWidget {
+  const OnboardingScreen({super.key});
+
   @override
   _OnboardingScreenState createState() => _OnboardingScreenState();
 }

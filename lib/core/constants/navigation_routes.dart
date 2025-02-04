@@ -9,7 +9,7 @@ class NavigationRoutes {
   ///       ROTAS BÁSICAS
   /// ============================
 
-  static final _authModuleRoute = "${RouteNames.authModuleRoute}";
+  static final _authModuleRoute = RouteNames.authModuleRoute;
   static final _loginModuleRoute = "${RouteNames.authModuleRoute}${RouteNames.loginModuleRoute}";
   static final _registerModuleRoute = "${RouteNames.authModuleRoute}${RouteNames.registerModule}";
   static final _forgetPasswordModuleRoute = "${RouteNames.authModuleRoute}${RouteNames.forgetPasswordModule}";

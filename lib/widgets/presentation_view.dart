@@ -9,7 +9,7 @@ class PresentationWidget extends StatelessWidget {
   final String description;
   final String image;
 
-  const PresentationWidget({
+  const PresentationWidget({super.key, 
     required this.title,
     required this.description,
     required this.image,
@@ -21,18 +21,22 @@ class PresentationWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Image.asset(image, height: 300.h),
-        SizedBox(height: 20.h),
-        Text(
-          title,
-          style: context.textTheme.displaySmall!
-              .copyWith(color: MainColorsLight.textBlack),
-          textAlign: TextAlign.center,
-        ),
-        SizedBox(height: 10.h),
-        Text(description,
+        Padding(
+          padding: EdgeInsets.only(top: 20.h),
+          child: Text(
+            title,
+            style: context.textTheme.displaySmall!
+                .copyWith(color: MainColorsLight.textBlack),
             textAlign: TextAlign.center,
-            style: context.textTheme.bodyMedium!
-                .copyWith(color: MainColorsLight.textBody)),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 16.h),
+          child: Text(description,
+              textAlign: TextAlign.center,
+              style: context.textTheme.bodyMedium!
+                  .copyWith(color: MainColorsLight.textBody)),
+        ),
       ],
     );
   }
