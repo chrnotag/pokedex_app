@@ -2,6 +2,10 @@
 
 Este é um aplicativo de Pokédex desenvolvido em Flutter com arquitetura MVVM, utilizando Flutter Modular para modularização e Firebase para autenticação e persistência de dados. O app também implementa o Hive para um modelo offline-first.
 
+## Créditos pelo front-end
+- O design das telas utilizadas nesse aplicativo foram feitos pelo designer de UI/UX **Junior Saraiva** - Linkedin: <a>https://www.linkedin.com/in/junior-saraiva/</a>
+- Figma com as telas utilizadas: <a>https://www.figma.com/design/CdunalBBehDO1UfsLgk1oP/Pok%C3%A9dex-%2F-Pok%C3%A9mon-App-(Community)?node-id=95-236&p=f&t=OVQEkFz0NOAsUMtO-0</a>
+
 ## Tecnologias Utilizadas
 - **Flutter**
 - **Dart**
@@ -25,14 +29,21 @@ O aplicativo segue a arquitetura **MVVM** (Model-View-ViewModel), garantindo org
 ## Telas do App
 
 ### Splash Screen
-<!-- Adicionar imagem da tela de Splash -->
+<img src="https://github.com/user-attachments/assets/18af34af-e7ac-480e-b564-5b1b9754709d" alt="Tela animada Splash" width="300">
 
 A animação na Splash Screen destaca cada letra do nome "Pokédex" surgindo individualmente.
+Esse efeito é obtido por meio de um `AnimationController`, transformando a String "Pokédex" em um array de caracteres. O `animationBuilder` faz com que cada letra aumente seu tamanho em 1.5x por 0.5 segundos e logo após reverte o fazendo voltar ao normal, ao encerrar a animação de um caracter ele pula para o outro. A animação continua até a tela ser fechada após todos os dados essenciais para o aplicativo serem carregados.
 
-### Tela de Login
-<!-- Adicionar imagem da tela de Login -->
+### Tela de Onboarding
+<img src="https://github.com/user-attachments/assets/47cb072f-0706-41b9-b6e4-5a204abfa388" alt="Tela com Carousel onboarding" width=300>
 
-Tela para autenticação via Firebase.
+Tela de onboarding, informa ao usuário o proposito principal do aplicativo de forma objetiva e intuitiva.
+Nessa tela foi utilizado o widget `CarouselSlider` juntamente com um `AnimatedContainer` para animar o indicador inferior ao mudar as telas.
+
+### Tela para Escolher Login ou registrar
+<img src="https://github.com/user-attachments/assets/f6ee7eb7-edf1-4ba8-bafa-7b3e708e3b54" width=300>
+
+Essa tela tem como função fornecer ao usuário uma escolha entre logar ou se registrar, ele também pode optar por pular o login/registro caso queira, podendo utilizar o app sem a necessidade de se logar no mesmo.
 
 ### Tela de Registro
 <!-- Adicionar imagem da tela de Registro -->
