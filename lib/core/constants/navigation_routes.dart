@@ -42,7 +42,10 @@ class NavigationRoutes {
   static final registerSuccessful = "$_registerModuleRoute${RouteNames.registerSuccessful}";
 
   // 🔹 Caminho completo para a tela de recuperação de senha - Etapa 01
-  static final recoverPassword = "${RouteNames.authModuleRoute}${RouteNames.forgetPasswordModule}${RouteNames.recoverPassword}";
+  static final forgetPassword = "$_forgetPasswordModuleRoute${RouteNames.forgetPassword}";
+
+  // 🔹 Caminho completo para a tela de recuperação de senha - Etapa 02
+  static final recoverPassword = "$_forgetPasswordModuleRoute${RouteNames.recoverPassword}";
 
   /// ============================
   ///        ESCOPO HOME

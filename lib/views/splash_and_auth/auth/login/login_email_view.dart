@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex_app/core/constants/colors/main_colors_light.dart';
+import 'package:pokedex_app/core/constants/navigation_routes.dart';
 import 'package:pokedex_app/core/extensions/theme_extensions/theme_extension.dart';
 import 'package:pokedex_app/widgets/main_extended_button_blue.dart';
 import 'package:pokedex_app/widgets/textfield_custom.dart';
@@ -83,7 +85,7 @@ class _LoginEmailViewState extends State<LoginEmailView> {
                     Padding(
                       padding: EdgeInsets.only(top: 24.h),
                       child: TextButton(
-                          onPressed: () {}, child: Text("Esqueceu sua senha?", style: context.textTheme.bodySmall!.copyWith(color: MainColorsLight.primaryBlue, fontWeight: FontWeight.w900),)),
+                          onPressed: () => Modular.to.pushNamed(NavigationRoutes.forgetPassword), child: Text("Esqueceu sua senha?", style: context.textTheme.bodySmall!.copyWith(color: MainColorsLight.primaryBlue, fontWeight: FontWeight.w900),)),
                     ),
                   ],
                 ),
