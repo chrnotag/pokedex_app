@@ -84,7 +84,7 @@ class _RegistrationFlowState extends State<RegistrationFlow> {
                         ),
                         Padding(
                           padding: EdgeInsets.only(top: 8.h),
-                          child: Text(widget.textFieldWarning, style: context.textTheme.bodySmall!.copyWith(fontSize: 12.sp),textAlign: TextAlign.center,),
+                          child: Text(widget.textFieldWarning, style: context.textTheme.bodySmall,textAlign: TextAlign.center,),
                         ),
                       ],
                     ),
