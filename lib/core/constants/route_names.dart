@@ -51,6 +51,10 @@ class RouteNames {
   static final favoritesModule = "/favorites";
   static final perfilModule = "/perfil";
 
+
+  // 🔹 Rotas específicas dentro do módulo Home
+  static final homeContainer = "/home-container";
+
   // 🔹 Rotas específicas dentro do módulo de Regiões
   static final regionsPokemons = "/pokemons";
 

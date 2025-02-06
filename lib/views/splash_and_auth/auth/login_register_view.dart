@@ -25,7 +25,7 @@ class LoginRegisterView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () => Modular.to.navigate(NavigationRoutes.homeContainer),
                       child: Row(
                         children: [
                           Text(

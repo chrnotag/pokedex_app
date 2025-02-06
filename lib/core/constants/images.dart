@@ -9,4 +9,12 @@ class Images{
   static final imagesCircularProgressCustom = 'assets/images/circular_progress_custom.png';
   static final imagesRegisterSuccessful = 'assets/images/successful_registration_image.png';
   static final imagesLoginSuccessful = 'assets/images/image_login_successful.png';
+  static final imagesPokePinDesactivate = 'assets/images/pokepin_icon_desactivate.png';
+  static final imagesPokePinActivate = 'assets/images/pokepin_icon_activate.png';
+  static final imagesPokeBallActivate = 'assets/images/pokeball_icon_activate.png';
+  static final imagesPokeBallDesactivate = 'assets/images/pokeball_icon_desactivate.png';
+  static final imagesHearthActivate = 'assets/images/hearth_icon_activate.png';
+  static final imagesHearthDesactivate = 'assets/images/hearth_icon_desactivate.png';
+  static final imagesPerfilActivate = 'assets/images/perfil_icon_activate.png';
+  static final imagesPerfilDesactivate = 'assets/images/perfil_icon_desactivate.png';
 }

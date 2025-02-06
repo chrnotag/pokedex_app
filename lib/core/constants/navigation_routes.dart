@@ -5,14 +5,11 @@ class NavigationRoutes {
   ///        ESCOPO AUTH
   /// ============================
 
-  /// ============================
-  ///       ROTAS BÁSICAS
-  /// ============================
-
+  // 🔹 Pré Configuração das rotas principais
   static final _authModuleRoute = RouteNames.authModuleRoute;
-  static final _loginModuleRoute = "${RouteNames.authModuleRoute}${RouteNames.loginModuleRoute}";
-  static final _registerModuleRoute = "${RouteNames.authModuleRoute}${RouteNames.registerModule}";
-  static final _forgetPasswordModuleRoute = "${RouteNames.authModuleRoute}${RouteNames.forgetPasswordModule}";
+  static final _loginModuleRoute = "$_authModuleRoute${RouteNames.loginModuleRoute}";
+  static final _registerModuleRoute = "$_authModuleRoute${RouteNames.registerModule}";
+  static final _forgetPasswordModuleRoute = "$_authModuleRoute${RouteNames.forgetPasswordModule}";
 
   // 🔹 Caminho completo para a tela de login e registro dentro do módulo de autenticação
   static final loginAndRegister = "$_loginModuleRoute${RouteNames.loginAndRegister}";
@@ -50,6 +47,12 @@ class NavigationRoutes {
   /// ============================
   ///        ESCOPO HOME
   /// ============================
+
+  // 🔹 Pré Configurações das rotas principais
+  static final _home = RouteNames.homeModule;
+
+  // 🔹 Caminho completo para a tela home container dentro do módulo home
+  static final homeContainer = "$_home${RouteNames.homeContainer}";
 
   // 🔹 Caminho completo para a tela de alteração de nome dentro do perfil
   static final perfilChangeName = "${RouteNames.homeModule}${RouteNames.perfilModule}${RouteNames.perfilChangeName}";

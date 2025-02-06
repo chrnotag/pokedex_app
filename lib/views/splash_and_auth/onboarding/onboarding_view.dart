@@ -91,7 +91,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                     controller.nextPage(duration: Duration(milliseconds: 300));
                   });
                 } else {
-                  print(RouteNames.loginAndRegister);
                   Modular.to.pushNamed(NavigationRoutes.loginAndRegister);
                 }
               })
