@@ -6,8 +6,12 @@ import 'package:pokedex_app/app_widget.dart';
 import 'package:pokedex_app/core/modules/app_module.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(ScreenUtilInit(
     designSize: const Size(360, 800),
+    enableScaleText: () => true,
+    minTextAdapt: true,
+    ensureScreenSize: true,
     builder: (context, child) =>
         ModularApp(module: AppModule(), child: AppWidget()),
   ));

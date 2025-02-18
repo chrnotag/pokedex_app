@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pokedex_app/core/constants/sizes.dart';
 import 'package:pokedex_app/core/extensions/theme_extensions/theme_extension.dart';
 
 import '../core/constants/colors/main_colors_light.dart';
@@ -9,7 +10,8 @@ class PresentationWidget extends StatelessWidget {
   final String description;
   final String image;
 
-  const PresentationWidget({super.key, 
+  const PresentationWidget({
+    super.key,
     required this.title,
     required this.description,
     required this.image,
@@ -25,8 +27,9 @@ class PresentationWidget extends StatelessWidget {
           padding: EdgeInsets.only(top: 20.h),
           child: Text(
             title,
-            style: context.textTheme.displaySmall!
-                .copyWith(color: MainColorsLight.textBlack),
+            style: context.textTheme.displayMedium!.copyWith(
+                color: MainColorsLight.textBlack,
+                fontSize: AppSizes.textDisplayMedium.sp),
             textAlign: TextAlign.center,
           ),
         ),
@@ -34,8 +37,10 @@ class PresentationWidget extends StatelessWidget {
           padding: EdgeInsets.only(top: 16.h),
           child: Text(description,
               textAlign: TextAlign.center,
-              style: context.textTheme.bodyMedium!
-                  .copyWith(color: MainColorsLight.textBody)),
+              style: context.textTheme.bodyMedium!.copyWith(
+                fontSize: AppSizes.textBodyMedium.sp,
+                color: MainColorsLight.textBody,
+              )),
         ),
       ],
     );
