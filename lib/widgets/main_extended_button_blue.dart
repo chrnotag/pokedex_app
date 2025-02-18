@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pokedex_app/core/constants/sizes.dart';
 import 'package:pokedex_app/core/extensions/theme_extensions/theme_extension.dart';
 import '../core/constants/colors/main_colors_light.dart';
 
@@ -27,13 +28,14 @@ class MainExtendedButtonBlue extends StatelessWidget {
                 backgroundColor: MainColorsLight.primaryBlue,
                 disabledBackgroundColor: Colors.grey.shade300),
             child: Padding(
-              padding: EdgeInsets.all(15.h),
+              padding: EdgeInsets.all(15.r),
               child: Text(
                 text,
                 style: context.textTheme.bodyLarge!.copyWith(
                     color:
                         activeState ? Colors.white : MainColorsLight.textHint,
-                    fontWeight: FontWeight.w900),
+                    fontWeight: FontWeight.w900,
+                    fontSize: AppSizes.textBodyLarge.sp),
               ),
             ),
           ),
