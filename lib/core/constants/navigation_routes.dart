@@ -15,7 +15,7 @@ class NavigationRoutes {
   static final _forgetPasswordModuleRoute = "${RouteNames.authModuleRoute}${RouteNames.forgetPasswordModule}";
 
   // 🔹 Caminho completo para a tela de login e registro dentro do módulo de autenticação
-  static final loginAndRegister = "$_loginModuleRoute${RouteNames.loginAndRegister}";
+  static final loginAndRegister = "$_authModuleRoute${RouteNames.loginAndRegister}";
 
   // 🔹 Caminho completo para a tela de login
   static final login = "$_loginModuleRoute${RouteNames.login}";

@@ -3,7 +3,9 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex_app/core/constants/colors/main_colors_light.dart';
 import 'package:pokedex_app/core/constants/fonts.dart';
+import 'package:pokedex_app/core/constants/navigation_routes.dart';
 import 'package:pokedex_app/core/constants/route_names.dart';
+import 'package:pokedex_app/core/services/auth/login/login_service.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -12,22 +14,34 @@ class SplashScreen extends StatefulWidget {
   _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
+class _SplashScreenState extends State<SplashScreen>
+    with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   final String _text = "Pokédex";
   int _letterCount = 0; // Número de letras em "Pokédex"
-  final double _animationDurationPerLetter = 0.5; // Duração da animação por letra em segundos
+  final double _animationDurationPerLetter =
+      0.5; // Duração da animação por letra em segundos
+  late final bool _userLoggedStats;
 
   @override
   void initState() {
     super.initState();
     _letterCount = _text.length;
     _controller = AnimationController(
-      duration: Duration(seconds: (_letterCount * _animationDurationPerLetter).toInt()),
+      duration: Duration(
+          seconds: (_letterCount * _animationDurationPerLetter).toInt()),
       vsync: this,
     )..repeat(); // Repetir indefinidamente
+  }
 
-    Future.delayed(Duration(seconds: 4), () => Modular.to.navigate(RouteNames.onboardingRoute),);
+  @override
+  void didChangeDependencies() async {
+    super.didChangeDependencies();
+    _userLoggedStats = await LoginService.verifyLoggedUser();
+    print(_userLoggedStats);
+    _userLoggedStats
+        ? Modular.to.navigate(RouteNames.onboardingRoute)
+        : Modular.to.navigate(RouteNames.onboardingRoute);
   }
 
   @override
