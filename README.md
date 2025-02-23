@@ -9,13 +9,15 @@ Este é um aplicativo de Pokédex desenvolvido em Flutter com arquitetura MVVM, 
 ## Tecnologias Utilizadas
 - **Flutter**
 - **Dart**
-- **Flutter Modular** (Gerenciamento de estado e injeção de dependência)
+- **Flutter Modular** (Injeção de dependencia e modularidade)
+- **BloC** (Gerenciamento de estados)
 - **Firebase** (Autenticação e banco de dados)
-- **Hive** (Armazenamento offline)
+- **Isar** (Armazenamento offline)
 - **Flutter Animate** (Animações dinâmicas)
 
 ## Estrutura do Projeto
 O aplicativo segue a arquitetura **MVVM** (Model-View-ViewModel), garantindo organização e manutenção do código.
+Segue também os principios **SOLID** e **Clean Architecture** para fácil manutenção e escalabilidade.
 
 ---
 
@@ -24,7 +26,7 @@ O aplicativo segue a arquitetura **MVVM** (Model-View-ViewModel), garantindo org
 - **Persistência de dados**: Firebase para sincronização e Hive para funcionamento offline
 - **Lista de Pokémons**: Exibição detalhada dos Pokémons com imagens e atributos
 - **Favoritos**: Possibilidade de favoritar Pokémons
-- **Perfil do Usuário**: Informações do usuário autenticado
+- **Perfil do Usuário**: Informações do usuário autenticado on-line ou off-line
 
 ## Telas do App
 
