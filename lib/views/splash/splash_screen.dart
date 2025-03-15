@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -5,7 +6,12 @@ import 'package:pokedex_app/core/constants/colors/main_colors_light.dart';
 import 'package:pokedex_app/core/constants/fonts.dart';
 import 'package:pokedex_app/core/constants/navigation_routes.dart';
 import 'package:pokedex_app/core/constants/route_names.dart';
+import 'package:pokedex_app/core/repositories/user_repository.dart';
 import 'package:pokedex_app/core/services/auth/login/login_service.dart';
+import 'package:pokedex_app/core/services/local_storage/services/save_into_storage.dart';
+import 'package:pokedex_app/models/user/user_infos.dart';
+
+import '../../core/services/local_storage/services/read_from_storage.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -38,10 +44,29 @@ class _SplashScreenState extends State<SplashScreen>
   void didChangeDependencies() async {
     super.didChangeDependencies();
     _userLoggedStats = await LoginService.verifyLoggedUser();
-    print(_userLoggedStats);
-    _userLoggedStats
-        ? Modular.to.navigate(RouteNames.onboardingRoute)
-        : Modular.to.navigate(RouteNames.onboardingRoute);
+    final dados = await ReadFromStorage<UserInfos>().read();
+    if (_userLoggedStats) {
+      if (dados == null) {
+        final currentUser = FirebaseAuth.instance.currentUser;
+        final userinfo = UserInfos(
+            displayName: currentUser?.displayName,
+            email: currentUser?.email,
+            photoURL: currentUser?.photoURL,
+            uid: currentUser?.uid);
+        try {
+          await SaveIntoStorage<UserInfos>().save(userinfo);
+        } catch (e) {
+          print("erro aqui");
+        }
+      } else {
+        final dados =
+            UserInfos.fromJson(await ReadFromStorage<UserInfos>().read() ?? {});
+        Modular.get<UserRepository>().userInfos = dados;
+      }
+      Modular.to.navigate(NavigationRoutes.loginSuccessful);
+    } else {
+      Modular.to.navigate(RouteNames.onboardingRoute);
+    }
   }
 
   @override

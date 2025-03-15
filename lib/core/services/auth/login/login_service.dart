@@ -1,4 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_modular/flutter_modular.dart';
+import 'package:pokedex_app/core/constants/navigation_routes.dart';
+import 'package:pokedex_app/core/constants/route_names.dart';
 import 'package:pokedex_app/core/services/auth/login/enum_auth_states.dart';
 
 class LoginService {

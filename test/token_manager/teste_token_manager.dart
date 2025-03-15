@@ -5,7 +5,7 @@ import 'package:mockito/annotations.dart';
 import 'package:pokedex_app/core/services/local_storage/services/tokens_manager.dart';
 
 @GenerateMocks([FlutterSecureStorage])
-import 'teste_salvar_tokens.mocks.dart';
+import 'teste_token_manager.mocks.dart';
 
 void main() {
   late TokensManager tokensManager;
@@ -61,6 +61,14 @@ void main() {
 
         verify(mockStorage.write(key: key, value: newToken)).called(1);
 
+      },);
+      test("Deve ler a lista de tokens salvos", () async {
+        final String listaTokens = ["userId", "sessionId", "pokemnos"].join(",");
+        when(mockStorage.read(key: anyNamed("key"))).thenAnswer((_) async => listaTokens);
+
+        await tokensManager.getTokens();
+
+        verify(mockStorage.read(key: anyNamed("key"))).called(1);
       },);
     },
   );

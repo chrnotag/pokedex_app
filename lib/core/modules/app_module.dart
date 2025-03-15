@@ -9,9 +9,8 @@ import 'auth/auth_module.dart';
 class AppModule extends Module{
 
   @override
-  void exportedBinds(Injector i) {
-    // TODO: implement exportedBinds
-    super.exportedBinds(i);
+  void binds(Injector i) {
+    super.binds(i);
     i.addSingleton(UserRepository.new);
     i.addSingleton(FlutterSecureStorage.new);
   }
