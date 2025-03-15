@@ -45,11 +45,8 @@ class RouteNames {
   // 🔹 Rota raiz do módulo Home (usada no AppModule)
   static final homeModule = "/home";
 
-  // 🔹 Submódulos dentro do HomeModule (cada um define suas próprias rotas internas)
-  static final pokedexModule = "/pokedex";
-  static final regionsModule = "/regions";
-  static final favoritesModule = "/favorites";
-  static final perfilModule = "/perfil";
+  // 🔹 Rotas específicas dentro do módulo Home
+  static String get homeContainer => "/container";
 
   // 🔹 Rotas específicas dentro do módulo de Regiões
   static final regionsPokemons = "/pokemons";

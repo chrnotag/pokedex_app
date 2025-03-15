@@ -52,14 +52,5 @@ class NavigationRoutes {
   /// ============================
 
   // 🔹 Caminho completo para a tela de alteração de nome dentro do perfil
-  static final perfilChangeName = "${RouteNames.homeModule}${RouteNames.perfilModule}${RouteNames.perfilChangeName}";
-
-  // 🔹 Caminho completo para a tela de confirmação de e-mail dentro do perfil
-  static final perfilConfirmEmail01 = "${RouteNames.homeModule}${RouteNames.perfilModule}${RouteNames.perfilConfirmEmail01}";
-
-  // 🔹 Caminho completo para a tela de alteração de senha dentro do perfil
-  static final perfilChangePassword01 = "${RouteNames.homeModule}${RouteNames.perfilModule}${RouteNames.perfilChangePassword01}";
-
-  // 🔹 Caminho completo para a listagem de Pokémon por região dentro do módulo Home
-  static final regionsPokemons = "${RouteNames.homeModule}${RouteNames.regionsModule}${RouteNames.regionsPokemons}";
+static String get homeContainer => "${RouteNames.homeModule}${RouteNames.homeContainer}";
 }
