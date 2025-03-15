@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex_app/core/constants/images.dart';
-import 'package:pokedex_app/core/repositories/user_repository.dart';
-import 'package:pokedex_app/core/services/local_storage/services/read_from_storage.dart';
-import 'package:pokedex_app/models/user/user_infos.dart';
 import 'package:pokedex_app/widgets/main_extended_button_blue.dart';
 import 'package:pokedex_app/widgets/presentation_view.dart';
-import '../../../../core/constants/navigation_routes.dart';
 
 class LoginSuccessfulView extends StatelessWidget {
   const LoginSuccessfulView({super.key});
@@ -28,9 +23,8 @@ class LoginSuccessfulView extends StatelessWidget {
                   image: Images.imagesLoginSuccessful),
               Padding(
                 padding: EdgeInsets.only(top: 32.h),
-                child: MainExtendedButtonBlue(text: "Continuar", onPressed: () async {
-                  print(Modular.get<UserRepository>().userInfos.email);
-                }),
+                child: MainExtendedButtonBlue(
+                    text: "Continuar", onPressed: () async {}),
               ),
             ],
           ),

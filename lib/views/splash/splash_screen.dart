@@ -8,10 +8,8 @@ import 'package:pokedex_app/core/constants/navigation_routes.dart';
 import 'package:pokedex_app/core/constants/route_names.dart';
 import 'package:pokedex_app/core/repositories/user_repository.dart';
 import 'package:pokedex_app/core/services/auth/login/login_service.dart';
-import 'package:pokedex_app/core/services/local_storage/services/save_into_storage.dart';
+import 'package:pokedex_app/core/services/local_storage/services/local_storage_manager.dart';
 import 'package:pokedex_app/models/user/user_infos.dart';
-
-import '../../core/services/local_storage/services/read_from_storage.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -44,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen>
   void didChangeDependencies() async {
     super.didChangeDependencies();
     _userLoggedStats = await LoginService.verifyLoggedUser();
-    final dados = await ReadFromStorage<UserInfos>().read();
+    final dados = await LocalStorageManager<UserInfos>().read();
     if (_userLoggedStats) {
       if (dados == null) {
         final currentUser = FirebaseAuth.instance.currentUser;
@@ -54,14 +52,12 @@ class _SplashScreenState extends State<SplashScreen>
             photoURL: currentUser?.photoURL,
             uid: currentUser?.uid);
         try {
-          await SaveIntoStorage<UserInfos>().save(userinfo);
+          await LocalStorageManager<UserInfos>().save(userinfo);
         } catch (e) {
           print("erro aqui");
         }
       } else {
-        final dados =
-            UserInfos.fromJson(await ReadFromStorage<UserInfos>().read() ?? {});
-        Modular.get<UserRepository>().userInfos = dados;
+        Modular.get<UserRepository>().userInfos = UserInfos.fromJson(dados);
       }
       Modular.to.navigate(NavigationRoutes.loginSuccessful);
     } else {

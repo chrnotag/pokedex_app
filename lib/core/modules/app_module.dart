@@ -1,9 +1,9 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:pokedex_app/core/constants/route_names.dart';
 import 'package:pokedex_app/core/modules/home/home_module.dart';
 import 'package:pokedex_app/core/modules/splash_and_onboarding/splash_module.dart';
 import 'package:pokedex_app/core/repositories/user_repository.dart';
+import 'package:pokedex_app/core/services/local_storage/services/tokens_manager.dart';
 import 'auth/auth_module.dart';
 
 class AppModule extends Module{
@@ -12,7 +12,7 @@ class AppModule extends Module{
   void binds(Injector i) {
     super.binds(i);
     i.addSingleton(UserRepository.new);
-    i.addSingleton(FlutterSecureStorage.new);
+    i.addSingleton(TokensManager.new);
   }
 
   @override
