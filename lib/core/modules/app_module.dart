@@ -1,11 +1,9 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:isar/isar.dart';
-import 'package:path_provider/path_provider.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 import 'package:pokedex_app/core/constants/route_names.dart';
 import 'package:pokedex_app/core/modules/home/home_module.dart';
 import 'package:pokedex_app/core/modules/splash_and_onboarding/splash_module.dart';
 import 'package:pokedex_app/core/repositories/user_repository.dart';
-import '../../models/user/user_infos.dart';
 import 'auth/auth_module.dart';
 
 class AppModule extends Module{
@@ -15,10 +13,7 @@ class AppModule extends Module{
     // TODO: implement exportedBinds
     super.exportedBinds(i);
     i.addSingleton(UserRepository.new);
-    i.addSingleton<Isar>((i) async {
-      final dir = await getApplicationDocumentsDirectory();
-      return await Isar.open([UserInfosSchema], directory: "${dir.path}/isar");
-    });
+    i.addSingleton(FlutterSecureStorage.new);
   }
 
   @override

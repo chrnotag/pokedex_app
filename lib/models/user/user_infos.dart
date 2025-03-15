@@ -1,12 +1,10 @@
-import 'package:isar/isar.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:pokedex_app/core/services/local_storage/interfaces/serializable_model.dart';
 
 part 'user_infos.g.dart';
 
-@collection
 @JsonSerializable()
-class UserInfos {
-  Id id = Isar.autoIncrement;
+class UserInfos extends SerializableModel {
   final String? uid;
   final String? email;
   final String? displayName;
@@ -22,5 +20,6 @@ class UserInfos {
   factory UserInfos.fromJson(Map<String, dynamic> json) =>
       _$UserInfosFromJson(json);
 
+  @override
   Map<String, dynamic> toJson() => _$UserInfosToJson(this);
 }

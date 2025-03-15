@@ -48,7 +48,9 @@ dependencies:
   bloc: ^9.0.0
   flutter_bloc: ^9.0.0
   path_provider: ^2.1.5
-  isar: ^3.1.0+1
+  build_runner: ^2.4.15
+  flutter_secure_storage: ^4.2.1
+  mockito: ^5.4.5
 
 dev_dependencies:
   flutter_test:
@@ -60,8 +62,6 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^5.0.0
-  isar_generator: ^3.1.0+1
-  build_runner: ^2.4.13
   json_serializable: ^6.8.0
   json_annotation: ^4.9.0
   bloc_test: ^10.0.0
