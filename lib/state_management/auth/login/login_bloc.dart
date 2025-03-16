@@ -3,7 +3,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:pokedex_app/core/services/auth/login/login_service.dart';
 import 'package:pokedex_app/core/services/local_storage/services/local_storage_manager.dart';
-import '../../../core/constants/navigation_routes.dart';
+import '../../../core/constants/routes/navigation_routes.dart';
 import '../../../models/user/user_infos.dart';
 import 'login_event.dart';
 import 'login_state.dart';

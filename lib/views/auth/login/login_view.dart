@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:pokedex_app/core/constants/images.dart';
-import 'package:pokedex_app/core/constants/navigation_routes.dart';
+import 'package:pokedex_app/core/constants/assets/images.dart';
+import 'package:pokedex_app/core/constants/routes/navigation_routes.dart';
 
 import '../widets/auth_access_view.dart';
 

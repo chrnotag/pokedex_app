@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:pokedex_app/core/constants/route_names.dart';
+import 'package:pokedex_app/core/constants/routes/route_names.dart';
 import 'package:pokedex_app/views/auth/register/register_successful.dart';
 import 'package:pokedex_app/views/auth/register/register_view.dart';
 import 'package:pokedex_app/views/auth/register/registration_insert_email.dart';

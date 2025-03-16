@@ -1,4 +1,4 @@
-import 'package:pokedex_app/core/constants/route_names.dart';
+import 'route_names.dart';
 
 class NavigationRoutes {
   /// ============================

@@ -2,8 +2,8 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../core/constants/colors/loading_colors.dart';
-import '../core/constants/fonts.dart';
-import '../core/constants/gifs.dart';
+import '../core/constants/assets/fonts.dart';
+import '../core/constants/assets/gifs.dart';
 
 class TelaLoadingGifAleatorio extends StatefulWidget {
   const TelaLoadingGifAleatorio({

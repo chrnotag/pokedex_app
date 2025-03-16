@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:pokedex_app/core/constants/navigation_routes.dart';
+import 'package:pokedex_app/core/constants/routes/navigation_routes.dart';
 import 'package:validatorless/validatorless.dart';
 import '../widets/registration_flow.dart';
 

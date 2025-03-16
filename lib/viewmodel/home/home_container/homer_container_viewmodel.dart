@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../core/constants/icons.dart';
+import '../../../core/constants/assets/icons.dart';
 
 class HomerContainerViewmodel {
   int currentPage = 0;

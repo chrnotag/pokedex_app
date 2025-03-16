@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pokedex_app/core/constants/sizes.dart';
+import 'package:pokedex_app/core/constants/themes/sizes.dart';
 import 'package:pokedex_app/core/extensions/theme_extensions/theme_extension.dart';
 import '../core/constants/colors/main_colors_light.dart';
 

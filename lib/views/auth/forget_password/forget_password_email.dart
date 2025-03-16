@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pokedex_app/core/constants/navigation_routes.dart';
+import 'package:pokedex_app/core/constants/routes/navigation_routes.dart';
 import 'package:pokedex_app/core/extensions/theme_extensions/theme_extension.dart';
 import 'package:pokedex_app/widgets/main_extended_button_blue.dart';
 import 'package:pokedex_app/widgets/textfield_custom.dart';
 
-import '../../../core/constants/sizes.dart';
+import '../../../core/constants/themes/sizes.dart';
 
 class ForgetPasswordEmail extends StatefulWidget {
   const ForgetPasswordEmail({super.key});

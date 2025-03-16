@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:pokedex_app/core/constants/route_names.dart';
+import 'package:pokedex_app/core/constants/routes/route_names.dart';
 import 'package:pokedex_app/core/modules/auth/auth_module.dart';
 import 'package:pokedex_app/core/services/auth/login/login_service.dart';
 import 'package:pokedex_app/state_management/auth/login/login_bloc.dart';

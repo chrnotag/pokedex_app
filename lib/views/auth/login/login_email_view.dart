@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex_app/core/constants/colors/main_colors_light.dart';
-import 'package:pokedex_app/core/constants/navigation_routes.dart';
+import 'package:pokedex_app/core/constants/routes/navigation_routes.dart';
 import 'package:pokedex_app/core/extensions/theme_extensions/theme_extension.dart';
 import 'package:pokedex_app/state_management/auth/login/login_bloc.dart';
 import 'package:pokedex_app/state_management/auth/login/login_state.dart';

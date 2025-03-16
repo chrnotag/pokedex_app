@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:pokedex_app/core/constants/route_names.dart';
+import 'package:pokedex_app/core/constants/routes/route_names.dart';
 import 'package:pokedex_app/core/modules/app_module.dart';
 import 'package:pokedex_app/core/modules/auth/forget_password/forgete_password_module.dart';
 import 'package:pokedex_app/core/modules/auth/login/login_module.dart';

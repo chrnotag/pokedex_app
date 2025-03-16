@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pokedex_app/core/constants/images.dart';
-import 'package:pokedex_app/core/constants/navigation_routes.dart';
+import 'package:pokedex_app/core/constants/assets/images.dart';
+import 'package:pokedex_app/core/constants/routes/navigation_routes.dart';
 import 'package:pokedex_app/widgets/main_extended_button_blue.dart';
 import 'package:pokedex_app/widgets/presentation_view.dart';
 

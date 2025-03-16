@@ -2,8 +2,8 @@ import 'package:carousel_slider/carousel_controller.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
-import '../../core/constants/images.dart';
-import '../../core/constants/navigation_routes.dart';
+import '../../core/constants/assets/images.dart';
+import '../../core/constants/routes/navigation_routes.dart';
 import '../../widgets/presentation_view.dart';
 
 class OnboardingViewModel{

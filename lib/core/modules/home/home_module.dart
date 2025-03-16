@@ -1,5 +1,5 @@
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:pokedex_app/core/constants/route_names.dart';
+import 'package:pokedex_app/core/constants/routes/route_names.dart';
 import 'package:pokedex_app/viewmodel/home/home_container/homer_container_viewmodel.dart';
 import 'package:pokedex_app/views/home/main_container/home_main_container.dart';
 

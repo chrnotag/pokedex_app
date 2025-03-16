@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pokedex_app/core/constants/colors/main_colors_light.dart';
-import 'package:pokedex_app/core/constants/sizes.dart';
+import 'package:pokedex_app/core/constants/themes/sizes.dart';
 import 'package:pokedex_app/core/extensions/theme_extensions/theme_extension.dart';
 import 'package:pokedex_app/widgets/main_extended_button_blue.dart';
 

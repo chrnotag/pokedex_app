@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:validatorless/validatorless.dart';
 
-import '../../../../core/constants/navigation_routes.dart';
+import '../../../core/constants/routes/navigation_routes.dart';
 import '../widets/registration_flow.dart';
 
 class RegistrationInsertPassword extends StatefulWidget {
